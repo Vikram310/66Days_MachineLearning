@@ -49,4 +49,20 @@
  
 - Reference:
   - [**Machine Learning with Python Cookbook**](https://www.amazon.in/Machine-Learning-Python-Cookbook-Preprocessing/dp/9352137302/ref=sr_1_1?crid=3SWKWJG6II2GK&keywords=machine+learning+with+python+cookbook&qid=1636010115&sprefix=Machine+Learning+with+Python+%2Caps%2C273&sr=8-1)
-  
+
+[**Day4 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_datawithvikram-datascience-careers-activity-6859371819770748929--Etu)
+
+**💡 Linear Discriminant Analysis**: 
+-  LDA is a classification that is also a popular technique for dimensionality reduction. In PCA we were only interested in the component axes that maximize the variance in the data, while in LDA we have the additional goal of maximizing the differences between classes. In scikit-learn, It is implemented using LinearDiscriminantAnalysis, which includes a parameter, n_components, indicating the number of features we want to be returned, which can be determined using explained_variance. PCA is unsupervised whereas LDA is supervised.
+- LDA is carried out in the following steps
+
+      1. Calculate between-class scatter(S_B)
+      2. Calculate in-class scatter(S_W)
+      3. Calculate Eigenvalues of (Inverse of in-class scatter)*(between-class scatter)
+      4. Sort the Eigenvectors according to their Eigenvalues in decreasing order
+      5. Choose first k Eigenvectors and that will be new k dimensions(Linear Discriminants)
+      6. Transform the original n-dimensional data points into k dimensions.
+    
+- Reference:
+  - [**Machine Learning with Python Cookbook**](https://www.amazon.in/Machine-Learning-Python-Cookbook-Preprocessing/dp/9352137302/ref=sr_1_1?crid=3SWKWJG6II2GK&keywords=machine+learning+with+python+cookbook&qid=1636010115&sprefix=Machine+Learning+with+Python+%2Caps%2C273&sr=8-1)
+  - [**ML from Scratch on Youtube**](https://lnkd.in/gNPM6vW2)
