@@ -74,7 +74,7 @@
 - NMF is an unsupervised technique for linear dimensionality reduction that factorizes the feature matrix into matrices representing the latent relationship between observations and their features. NMF can reduce dimensionality because, in matrix multiplication, the two factors can have significantly fewer dimensions than the product matrix. Feature Matrix cannot contain negative values as the name implies and it does not provide us with the explained variance of the outputted features as PCA and other techniques. The best way to find the optimum value is by trying a range of values and finding the one that produces the best result. 
 - In NMF, we have a variable "r" which denotes desired number of features and NMF factorizes the feature matrix such that :
 
-            **V = W x H**
+            V = W x H
 
       V -> Original Input Matrix (Linear combination of W & H)
       W -> Feature Matrix (dimensions m x r)
@@ -83,3 +83,21 @@
  
 - Reference:
   - [**Machine Learning with Python Cookbook**](https://www.amazon.in/Machine-Learning-Python-Cookbook-Preprocessing/dp/9352137302/ref=sr_1_1?crid=3SWKWJG6II2GK&keywords=machine+learning+with+python+cookbook&qid=1636010115&sprefix=Machine+Learning+with+Python+%2Caps%2C273&sr=8-1)
+
+[**Day6 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6860085603141328896-wDQN)
+
+**💡 Variance Threshold**: 
+-  Feature selection is the process of reducing the number of input variables when developing a predictive model. It is desirable to reduce the number of input variables to both reduce the computational cost of modelling and, in some cases, to improve the performance of the model. Feature selector that removes all low-variance features. This feature selection algorithm looks only at the features (X), not the desired outputs (y), and can thus be used for unsupervised learning.
+
+- Reference:
+  - A comprehensive Guide to Machine Learning 
+
+[**Day7 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6860449779521064960-CSja)
+
+**💡 Feature Selection using Pearson Correlation**: 
+
+- Feature selection is also called variable selection or attribute selection. Feature selection methods aid you in your mission to create an accurate predictive model. They help you by choosing features that will give you good or better accuracy whilst requiring less data. While creating any model, the correlation between an independent feature and dependent feature is of high importance, but if two or more independent features are highly correlated, it is of no use, they just act as duplicate features and it is better to remove those independent features so that we can get more accurate results.
+
+- Reference:
+  - A comprehensive Guide to Machine Learning 
+
