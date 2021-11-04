@@ -5,10 +5,15 @@
 - **💡 Principal Component Analysis**: 
 - PCA is a dimensionality reduction technique that enables you to identify the correlations and patterns in the dataset so that it can be transformed into a dataset of significantly lower dimensions without any loss of important information. It is an unsupervised statistical technique used to examine the interrelations among a set of variables. It is also known as a general factor analysis where regression determines a line of best fit. It works on a condition that while the data in a higher-dimensional space is mapped to data in a lower dimension space, the variance or spread of the data in the lower dimensional space should be maximum.
 - PCA is carried out in the following steps
+
       1. Standardization of Data
+      
       2. Computing the covariance matrix
+      
       3. Calculation of the eigenvectors and eigenvalues
+      
       4. Computing the Principal components
+      
       5. Reducing the dimensions of the Data.
     
 - Reference:
@@ -35,9 +40,13 @@
 - **💡 RBF Kernel PCA**: 
 - Standard PCA uses linear projection to reduce the features. If the data is linearly separable then PCA works well. However, if your data is not linearly separable, then linear transformation will not work as well as expected. In this scenario, Kernel PCA will be useful. Kernel PCA uses a kernel function to project a dataset into a higher dimensional feature space, where it is linearly separable, this is called the Kernel trick. The most commonly used Kernel PCA is Gaussian radial basis function kernel RBF.
 - RBF Kernel PCA is carried out in the following steps
+
       1. Computation of Kernel Matrix: 
+      
             We need to compute kernel matrix for every point i.e., if there are 50 samples in a dataset, this step will result in a 50x50 kernel matrix.
+      
       2. Eigen-decomposition of Kernel Matrix:
+      
             To make the kernel matrix centered, we are applying this step and to obtain the eigenvectors of the centered kernel matrix that correspond to the largest eigenvalues.
  
 - Reference:
