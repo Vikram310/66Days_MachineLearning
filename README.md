@@ -1,4 +1,4 @@
-# # **Journey of 66DaysOfData in Machine Learning**
+# **Journey of 66DaysOfData in Machine Learning**
 
 [**Day1 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6858272818472329216-FOFx)
 
