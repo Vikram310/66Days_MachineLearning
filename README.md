@@ -42,11 +42,9 @@
 - RBF Kernel PCA is carried out in the following steps
 
       1. Computation of Kernel Matrix: 
-      
             We need to compute kernel matrix for every point i.e., if there are 50 samples in a dataset, this step will result in a 50x50 kernel matrix.
       
       2. Eigen-decomposition of Kernel Matrix:
-      
             To make the kernel matrix centered, we are applying this step and to obtain the eigenvectors of the centered kernel matrix that correspond to the largest eigenvalues.
  
 - Reference:
