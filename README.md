@@ -13,3 +13,18 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - [**ML from Scratch on Youtube**](https://lnkd.in/gNPM6vW2) 
+
+[**Day2 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6858635634706386944-RoFf)
+
+- **💡 Principal Component Analysis using scikit-learn**: 
+- PCA projects observations onto the (hopefully fewer) principal components of the feature matrix that retain the most variance. PCA can also be used in the scenario, where we need features to be retained that share maximum variance. PCA is implemented in scikit-learn using the PCA method:
+
+*class sklearn.decomposition.PCA(n_components=None, *, copy=True, whiten=False, svd_solver='auto', tol=0.0, iterated_power='auto', random_state=None)*
+
+- n_components has two operations, depending on the argument provided. If the argument is greater than 1,n_components will return that many features. If the argument to n_components is between 0 and 1, PCA returns the minimum amount of features that retain that much variance. It is common to use values of 0.95 and 0.99, meaning 95% and 99% of the variance of the original features has been retained.
+- whiten =True transforms the values of each principal component so that they have zero mean and unit variance. Whitening will remove some information from the transformed signal but can sometimes improve the predictive accuracy of the downstream estimators.
+- svd_solver=" randomized", which implements a stochastic algorithm to find the first principal components in often significantly less time. 
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - [**Scikit-learn Implementation**](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) 
