@@ -99,5 +99,52 @@
 - Feature selection is also called variable selection or attribute selection. Feature selection methods aid you in your mission to create an accurate predictive model. They help you by choosing features that will give you good or better accuracy whilst requiring less data. While creating any model, the correlation between an independent feature and dependent feature is of high importance, but if two or more independent features are highly correlated, it is of no use, they just act as duplicate features and it is better to remove those independent features so that we can get more accurate results.
 
 - Reference:
-  - A comprehensive Guide to Machine Learning 
+  - A comprehensive Guide to Machine Learning
 
+[**Day8 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6860834031316148224-3S86)
+
+**💡 Feature Selection - Information Gain - Mutual Information in Classification**: 
+
+- Feature selection helps to zone in on the relevant variables in a data set, and can also help to eliminate collinear variables. It helps reduce the noise in the data set, and it helps the model pick up the relevant signals. Mutual information (MI) between two random variables is a non-negative value, which measures the dependency between the variables .It is equal to zero if and only if two random variables are independent ,and higher values mean higher dependency. The function relies on non-parametric methods based on entropy estimation from K-Nearest neighbors distances. The mutual information between two random variables X and Y can be stated formally as follows:
+                              
+      𝐈(𝐗 ; 𝐘) = 𝐇(𝐗) – 𝐇(𝐗 | 𝐘) 𝐖𝐡𝐞𝐫𝐞 𝐈(𝐗 ; 𝐘) 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐮𝐭𝐮𝐚𝐥 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐗 𝐚𝐧𝐝 𝐘, 𝐇(𝐗) 𝐢𝐬 𝐭𝐡𝐞 𝐞𝐧𝐭𝐫𝐨𝐩𝐲 𝐟𝐨𝐫 𝐗 𝐚𝐧𝐝 𝐇(𝐗 | 𝐘) 𝐢𝐬 𝐭𝐡𝐞 𝐜𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐞𝐧𝐭𝐫𝐨𝐩𝐲 𝐟𝐨𝐫 𝐗 𝐠𝐢𝐯𝐞𝐧 𝐘. 𝐓𝐡𝐞 𝐫𝐞𝐬𝐮𝐥𝐭 𝐡𝐚𝐬 𝐭𝐡𝐞 𝐮𝐧𝐢𝐭𝐬 𝐨𝐟 𝐛𝐢𝐭𝐬.
+      
+- Reference:
+  - A comprehensive Guide to Machine Learning
+
+[**Day9 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6861256326744555520-0E9G)
+
+**💡 Gradient Descent**: 
+
+- Gradient descent is an iterative optimization algorithm that is popular and it is a base for many other optimization techniques, which tries to obtain minimal loss in a model by tuning the weights/parameters in the objective function. There are 3 types of Gradient Descent:
+
+      Types of Gradient Descent:
+            1. Batch Gradient Descent
+            2. Stochastic Gradient Descent
+            3. Mini Batch Gradient Descent
+      
+- Steps to achieve Minimal Loss:
+      
+      1. The first stage in gradient descent is to pick a starting value (a starting point) for w1, which is set to 0 by many algorithms.
+      2. The gradient descent algorithm then calculates the gradient of the loss curve at the starting point. 
+      3. The gradient always points in the direction of steepest increase in the loss function. The gradient descent algorithm takes a step in the direction of the negative gradient in order to reduce loss as quickly as possible.
+      4. To determine the next point along the loss function curve, the gradient descent algorithm adds some fraction of the gradient's magnitude to the starting point and moves forward.
+      5. The gradient descent then repeats this process, edging ever closer to the minimum.
+      
+      
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+
+[**Day10 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6861602060660568064-P6Zu)
+
+**💡 Feature Selection - Information Gain - Mutual Information in Regression**: 
+
+- Feature selection helps to zone in on the relevant variables in a data set, and can also help to eliminate collinear variables. It helps reduce the noise in the data set, and it helps the model pick up the relevant signals. Mutual information (MI) between two random variables is a non-negative value, which measures the dependency between the variables .It is equal to zero if and only if two random variables are independent ,and higher values mean higher dependency. The function relies on non-parametric methods based on entropy estimation from K-Nearest neighbors distances. The mutual information between two random variables X and Y can be stated formally as follows:
+                              
+      𝐈(𝐗 ; 𝐘) = 𝐇(𝐗) – 𝐇(𝐗 | 𝐘) 𝐖𝐡𝐞𝐫𝐞 𝐈(𝐗 ; 𝐘) 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐮𝐭𝐮𝐚𝐥 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐗 𝐚𝐧𝐝 𝐘, 𝐇(𝐗) 𝐢𝐬 𝐭𝐡𝐞 𝐞𝐧𝐭𝐫𝐨𝐩𝐲 𝐟𝐨𝐫 𝐗 𝐚𝐧𝐝 𝐇(𝐗 | 𝐘) 𝐢𝐬 𝐭𝐡𝐞 𝐜𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐞𝐧𝐭𝐫𝐨𝐩𝐲 𝐟𝐨𝐫 𝐗 𝐠𝐢𝐯𝐞𝐧 𝐘. 𝐓𝐡𝐞 𝐫𝐞𝐬𝐮𝐥𝐭 𝐡𝐚𝐬 𝐭𝐡𝐞 𝐮𝐧𝐢𝐭𝐬 𝐨𝐟 𝐛𝐢𝐭𝐬.
+
+**Select Percentile**
+- This is a modification to the K-Best feature selection technique where we select the top x percentile of the best scoring features. So in our example, if we say that K is 80%, we want to select the top 80 percentile of the features based on their scores.      
+      
+- Reference:
+  - A Comprehensive Guide to Machine Learning
