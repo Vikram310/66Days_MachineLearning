@@ -66,3 +66,20 @@
 - Reference:
   - [**Machine Learning with Python Cookbook**](https://www.amazon.in/Machine-Learning-Python-Cookbook-Preprocessing/dp/9352137302/ref=sr_1_1?crid=3SWKWJG6II2GK&keywords=machine+learning+with+python+cookbook&qid=1636010115&sprefix=Machine+Learning+with+Python+%2Caps%2C273&sr=8-1)
   - [**ML from Scratch on Youtube**](https://lnkd.in/gNPM6vW2)
+
+[**Day5 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6859726411431845890-bvhM)
+
+**💡 Reducing Features using Non-Negative Matrix Factorization (NMF)**:
+
+- NMF is an unsupervised technique for linear dimensionality reduction that factorizes the feature matrix into matrices representing the latent relationship between observations and their features. NMF can reduce dimensionality because, in matrix multiplication, the two factors can have significantly fewer dimensions than the product matrix. Feature Matrix cannot contain negative values as the name implies and it does not provide us with the explained variance of the outputted features as PCA and other techniques. The best way to find the optimum value is by trying a range of values and finding the one that produces the best result. 
+- In NMF, we have a variable "r" which denotes desired number of features and NMF factorizes the feature matrix such that :
+
+            **V = W x H**
+
+      V -> Original Input Matrix (Linear combination of W & H)
+      W -> Feature Matrix (dimensions m x r)
+      H -> Coefficient Matrix (dimensions r x n)
+      r -> Low rank approximation of A (r ≤ min(m,n))
+ 
+- Reference:
+  - [**Machine Learning with Python Cookbook**](https://www.amazon.in/Machine-Learning-Python-Cookbook-Preprocessing/dp/9352137302/ref=sr_1_1?crid=3SWKWJG6II2GK&keywords=machine+learning+with+python+cookbook&qid=1636010115&sprefix=Machine+Learning+with+Python+%2Caps%2C273&sr=8-1)
