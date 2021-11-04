@@ -131,7 +131,6 @@
       4. To determine the next point along the loss function curve, the gradient descent algorithm adds some fraction of the gradient's magnitude to the starting point and moves forward.
       5. The gradient descent then repeats this process, edging ever closer to the minimum.
       
-      
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
 
@@ -148,3 +147,26 @@
       
 - Reference:
   - A Comprehensive Guide to Machine Learning
+
+[**Day11 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6861989776892030976-Imca)
+
+**💡 Cross-Validation**: 
+
+- Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. That is, to use a limited sample in order to estimate how the model is expected to perform in general when used to make predictions on data not used during the training of the model. It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate of the model skill than other methods, such as a simple train/test split.
+      
+- Procedure for K-Fold Cross Validation:
+      
+      1. Shuffle the dataset randomly.
+      2. Split the dataset into k groups
+      3. For each unique group:
+            a. Take the group as a holdout or test data set
+            b. Take the remaining groups as a training data set
+            c. Fit a model on the training set and evaluate it on the test set
+            d. Retain the evaluation score and discard the model
+      4. Summarize the skill of the model using the sample of model evaluation scores
+      
+      
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - [**Machine Learning Mastery**](https://machinelearningmastery.com/)
+
