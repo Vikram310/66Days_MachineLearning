@@ -170,3 +170,18 @@
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - [**Machine Learning Mastery**](https://machinelearningmastery.com/)
 
+[**Day12 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6862275048439463936-gXFE)
+
+**💡 Linear Regression**: 
+
+- Linear Regression is a linear approach to modeling the relationships between a scalar response or dependent variable and one or more explanatory variables or independent variables. Linear regression assumes that the relationship between the features and the target vector is approximately linear. That is, the effect of the features on the target vector is constant. 
+- In linear regression, the target variable y is assumed to follow a linear function of one or more predictor variables plus some random error. The machine learning task is to estimate the parameters of this equation which can be achieved in two ways:
+
+      The first approach is through the lens of minimizing loss. A common practice in machine learning is to choose a loss function that defines how well a model with a given set of parameters estimates the observed data. The most common loss function for linear regression is squared error loss. 
+      
+      The second approach is through the lens of maximizing the likelihood. Another common practice in machine learning is to model the target as a random variable whose distribution depends on one or more parameters, and then find the parameters that maximize its likelihood
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - [**Data Science from Scratch**](https://www.amazon.in/Data-Science-Scratch-Joel-Grus/dp/149190142X)
+
