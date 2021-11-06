@@ -185,3 +185,14 @@
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - [**Data Science from Scratch**](https://www.amazon.in/Data-Science-Scratch-Joel-Grus/dp/149190142X)
 
+[**Day13 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6862672742160965632-LexA)
+
+**💡 Regularized Regression**: 
+
+- Regularized regression penalizes the magnitude of the regression coefficients to avoid overfitting, which is particularly helpful for models using a large number of predictors. There are two most common methods for regularized regression: Ridge Regression and Lasso Regression. The only difference between Ridge and Lasso regression is Ridge Regression uses the L2 norm for regularization and Lasso Regression uses the L1 norm for regularization.
+- ** L1 Norm** - The basis for penalization is the sum of the absolute value of the weights for the features. It tries to achieve a sparse solution where most of the features have a zero weight. It can have multiple solutions. Essentially, the L1 norm performs feature selection and uses only a few useful features for building prediction models, and completely ignores the rest of the features.
+- ** L2 Norm**: The basis for penalization is the squared sum of weights. It tries to reduce the magnitude of weights associated with all features, thereby reducing the effect of each feature on the predicted value. As it involves a squared term, it is not preferred when dealing with outliers. It always has a unique solution and handles complex datasets better than the L1 norm.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
