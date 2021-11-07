@@ -196,3 +196,28 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
+
+[**Day14 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-datawithvikram-datascience-activity-6862984538180718592-BXWt)
+
+**💡 Bayesian Regression**: 
+
+-  Bayesian regression places a prior distribution on the regression coefficients in order to reconcile existing beliefs about these parameters with information gained from new data. To demonstrate Bayesian regression, we’ll follow three typical steps to Bayesian analysis:
+            
+            1. Writing the likelihood
+            2. Writing the prior density
+            3. Using Bayes’ Rule to get the posterior density, which is used to calculate the maximum-a-posteriori (MAP)
+
+
+**💡 Generalized Linear Models (GLM)**: 
+
+-  Generalized linear models (GLMs) expand on ordinary linear regression by changing the assumed error structure and allowing for the expected value of the target variable to be a nonlinear function of the predictors. One example of GLM is Poisson regression.  A GLM can be fit in these four steps:
+            
+            1. Specify the distribution of Y indexed by its mean parameter μ
+            2. Specify the link function η (subscript n)=g(μ(subscript n)).
+            3. Identify a loss function. This is typically the negative log-likelihood.
+            4. Find the β that minimize that loss function.
+
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
