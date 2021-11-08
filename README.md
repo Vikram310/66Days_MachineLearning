@@ -226,9 +226,9 @@
 
 **💡 Logistic Regression**: 
 
--   Logistic Regression models a function of the target variable as a linear combination of the predictors, then converts this function into a fitted value in the desired range.
--    Binary or Binomial Logistic Regression can be understood as the type of Logistic Regression that deals with scenarios wherein the observed outcomes for dependent variables can be only in binary, i.e., it can have only two possible types.
--     Multinomial Logistic Regression works in scenarios where the outcome can have more than two possible types – type A vs type B vs type C – that are not in any particular order. 
+- Logistic Regression models a function of the target variable as a linear combination of the predictors, then converts this function into a fitted value in the desired range.
+- Binary or Binomial Logistic Regression can be understood as the type of Logistic Regression that deals with scenarios wherein the observed outcomes for dependent variables can be only in binary, i.e., it can have only two possible types.
+- Multinomial Logistic Regression works in scenarios where the outcome can have more than two possible types – type A vs type B vs type C – that are not in any particular order. 
 
 
 - Reference:
