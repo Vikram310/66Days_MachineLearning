@@ -234,3 +234,14 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
+
+[**Day16 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6863716039226720256-L9Pp)
+
+**💡 Perceptron Algorithm**: 
+
+- The perceptron algorithm is a simple classification method that plays an important historical role in the development of a much more flexible neural network.The perceptron is a linear binary classifier—linear since it separates the input variable space linearly and binary since it places observations into one of two classes. 
+- It consists of a single node or neuron that takes a row of data as input and predicts a class label. This is achieved by calculating the weighted sum of the inputs and a bias (set to 1). The weighted sum of the input of the model is called the activation. The coefficients of the model are referred to as input weights and are trained using the stochastic gradient descent optimization algorithm.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - Machine Learning Mastery(https://machinelearningmastery.com/)
