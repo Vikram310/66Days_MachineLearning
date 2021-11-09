@@ -244,4 +244,4 @@
 
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
-  - Machine Learning Mastery(https://machinelearningmastery.com/)
+  - [**Machine Learning Mastery**](https://machinelearningmastery.com/)
