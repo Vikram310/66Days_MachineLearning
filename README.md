@@ -245,3 +245,19 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - [**Machine Learning Mastery**](https://machinelearningmastery.com/)
+
+[**Day18 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6864445774042951680-7_4y)
+
+**💡 Generative Classifiers**: 
+
+- Generative classifiers view the predictors as being generated according to their class—i.e., they see the predictors as a function of the target, rather than the other way around. They then use Bayes’ rule to turn P( x(n) | Y(n) = k ) into P( Y(n) = k | x(n) ).  Generative models can be broken down into the three following steps:
+      
+      1. Estimate the density of the predictors conditional on the target belonging to each class.
+      2. Estimate the prior probability that a target belongs to any given class. 
+      3. Using Bayes’ rule, calculate the posterior probability that the target belongs to any given class.
+
+- This can be achieved using any one of LDA, QDA, or Naive Bayes. Quadratic Discriminant Analysis (QDA) is a classification algorithm and it is used in machine learning and statistics problems. QDA is an extension of Linear Discriminant Analysis (LDA). Unlike LDA, QDA considers each class to have its own variance or covariance matrix rather than to have a common one.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
