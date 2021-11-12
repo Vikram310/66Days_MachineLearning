@@ -261,3 +261,15 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
+
+[**Day19 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6864917122414473216-mzcm)
+
+**💡 CART (Classification and Regression Trees)**: 
+
+- A decision tree is an interpretable machine learning method for regression and classification. Trees iteratively split samples of the training data based on the value of a chosen predictor; the goal of each split is to create two sub-samples, or “children,” with greater purity of the target variable than their “parent”.
+- For regression tasks, purity means the first child should have observations with high values of the target variable and the second should have observations with low values.
+- For classification tasks, purity means the first child should have observations primarily of one class and the second should have observations primarily of another.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
