@@ -273,3 +273,19 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
+
+[**Day20 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6865279984592936960-2Gi9)
+
+**💡 TREE Ensemble Methods**: 
+
+- Ensemble methods combine the output of multiple simple models, often called “learners”, in order to create a final model with lower variance.Bagging, short for bootstrap aggregating, trains many learners on bootstrapped samples of the training data and aggregates the results into one final model. The process of bagging is very simple yet often quite powerful.
+- How exactly we combine the results of the learners into a single fitted value (the second part of the second step) depends on the target variable.
+
+      1. For a continuous target variable, we typically average the learners’ predictions.
+      2. For a categorical target variable, we typically use the class that receives the plurality vote.
+
+- A random forest is a slight extension to the bagging approach for decision trees that can further decrease overfitting and improve out-of-sample precision. Unlike bagging, random forests are exclusively designed for decision trees. Like bagging, a random forest combines the predictions of several base learners, each trained on a bootstrapped sample of the original training set. Random forests, however, add one additional regulatory step: at each split within each tree, we only consider splitting a randomly-chosen subset of the predictors.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
