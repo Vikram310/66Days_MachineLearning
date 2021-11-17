@@ -289,3 +289,34 @@
 - Reference:
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
+
+[**Day21 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6866004656930336768-HfU2)
+
+**💡 Adaboost for Classification**: 
+
+-  Like bagging and random forests, boosting combines multiple weak learners into one improved model. Boosting trains these weak learners sequentially, each one learning from the mistakes of the last. Weak learners in a boosting model learn from the mistakes of previous iterations by increasing the weights of observations that previous learners struggled with. How exactly we fit a weighted learner depends on the type of learner. Fortunately, for classification trees, this can be done with just a slight adjustment to the loss function. We use Discrete Adaboost for binary classification.
+-  Discrete Adaboost for Classification is achieved using the following steps:
+
+            1. Initialize the weights with W(1,n) = 1/N
+            2. Build a weak learner t using W(t)
+            3. Use weak learner to calculate fitted values
+            4. Calculate the weighted error for learner t
+            5. Calculate the accuracy measure for learner t
+            6. Calculate the overall fitted values
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
+
+[**Day22 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6866366842416586752-g4_4)
+
+**💡 Adaboost for Regression**: 
+
+-  Like AdaBoost, this algorithm uses weights to emphasize observations that previous learners struggled with. Unlike AdaBoost, however, it does not incorporate these weights into the loss function directly. Instead, in every iteration, it draws bootstrap samples from the training data where observations with greater weights are more likely to be drawn.
+-  We then fit a weak learner to the bootstrapped sample, calculate the fitted values on the original sample (i.e. not the bootstrapped sample), and use the residuals to assess the quality of the weak learner.
+-  In simple words, iteratively fit a weak learner, see where the learner struggles, and emphasize the observations where it failed (where the amount of emphasis depends on the overall strength of the learner).
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
+
