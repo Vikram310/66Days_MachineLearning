@@ -320,3 +320,19 @@
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
 
+[**Day23 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_github-vikram31066daysmachinelearning-activity-6866729191661035522-fFTt)
+
+**💡 Neural Networks**: 
+
+-  Neural networks come in a variety of forms intended to accomplish a variety of tasks. Recurrent neural networks are designed to model time series data, convolutional neural networks are designed to model image data and Feed-forward Neural networks can be used for regression or classification tasks. 
+-  An activation function is a (typically) nonlinear function that allows the network to learn complex relationships between the predictor(s) and the target variable(s). The two most common activation functions are ReLU (Rectified Linear Unit) and Sigmoid Functions. ReLU is a simple yet extremely common activation function. It acts like a switch, selectively turning channels on and off. 
+-  Neural Networks can be constructed in two common ways:
+
+            1. Loop Approach
+            2. Matrix Approach
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
+
+
