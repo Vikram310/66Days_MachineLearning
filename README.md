@@ -335,4 +335,17 @@
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
 
+[**Day24 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6867092398095388672-d_5R)
+
+**💡 Construction of FFNN by Loop Approach**: 
+
+-  It loops through the observations and adds the individual gradients
+-  Firstly, we build activation functions and then, we construct a class for fitting feed-forward networks by looping through observations. This class conducts gradient descent by calculating the gradients based on one observation at a time, looping through all observations, and summing the gradients before adjusting the weights.
+-  Once instantiated, we fit a network, which requires training data, the number of nodes for the hidden layer, an activation function for the first and second layers’ outputs, a loss function, and some parameters for gradient descent. After storing those values, the method randomly instantiates the network’s weights: W1, c1, W2, and c2. It then passes the data through this network to instantiate the output values: h1, z1, h2, and yhat(z2)
+-  We then begin conducting gradient descent. Within each iteration of the gradient descent process, we also iterate through the observations. For each observation, we calculate the derivative of the loss for that observation with respect to the network’s weights. We then sum these individual derivatives and adjust the weights accordingly, as is typical in gradient descent.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
+
 
