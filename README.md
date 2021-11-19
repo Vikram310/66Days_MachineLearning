@@ -348,4 +348,30 @@
   - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
   - A Comprehensive Guide to Machine Learning
 
+[**Day25 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6867452400391860224-PGFO)
+
+**💡 Implementation of FFNN **: 
+
+-  Neural networks in Keras can be fit through one of two APIs: The Sequential API and The Functional API.
+-   Fitting a network with the Keras sequential API can be broken down into four steps:
+
+            1. Instantiate model
+            2. Add layers
+            3. Compile model (and summarize)
+            4. Fit model
+
+- A Dense layer is one in which each neuron is a function of all the other neurons in the previous layer. We identify the number of neurons in the layer with the units argument and the activation function applied to the layer with the activation argument. For the first layer only, we must also identify the input_shape or the number of neurons in the input layer.
+- Fitting models with the Functional API can again be broken into four steps:
+   
+      1. Define layers
+      2. Define model
+      3. Compile model (and summarize)
+      4. Fit model
+
+- While the sequential approach first defines the model and then adds layers, the functional approach does the opposite. Note that in this approach, we link layers directly.
+
+- Reference:
+  - [**Machine Learning From Scratch**](https://dafriedman97.github.io/mlbook/content/introduction.html)
+  - A Comprehensive Guide to Machine Learning
+
 
