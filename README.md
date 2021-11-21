@@ -350,7 +350,7 @@
 
 [**Day25 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6867452400391860224-PGFO)
 
-**💡 Implementation of FFNN **: 
+**💡 Implementation of FFNN**: 
 
 -  Neural networks in Keras can be fit through one of two APIs: The Sequential API and The Functional API.
 -   Fitting a network with the Keras sequential API can be broken down into four steps:
@@ -376,7 +376,7 @@
 
 [**Day26 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868180581071646720-HkAR)
 
-**💡 Reducing Variance using Regularization **: 
+**💡 Reducing Variance usign Regularization**:: 
 
 - Regularized regression learners are similar to standard ones, except they attempt to minimize RSS and some penalty for the total size of the coefficient values, called a shrinkage penalty because it attempts to “shrink” the model. There are two common types of regularized learners for linear regression: Ridge regression and Lasso Regression. The only formal difference is the type of shrinkage penalty used.
 - In Ridge regression, the shrinkage penalty is a tuning hyperparameter multiplied by the squared sum of all coefficients, whereas in Lasso regression, shrinkage penalty is a tuning hyperparameter multiplied by the sum of the absolute value of all coefficients. As a very general rule of thumb, ridge regression often produces slightly better predictions than lasso, but lasso produces more interpretable models.
