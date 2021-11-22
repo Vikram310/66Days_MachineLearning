@@ -384,3 +384,13 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
+
+[**Day27 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868547393386885120-ch0P)
+
+**💡 Decision Tree Classifier**:: 
+
+-  In a decision tree, every decision rule occurs at a decision node, with the rule creating branches leading to new nodes. One reason for the popularity of tree-based models is their interpretability. In fact, decision trees can literally be drawn out in their complete form to create a highly intuitive model. Decision tree learners attempt to find a decision rule that produces the greatest decrease in impurity at a node. While there are a number of measurements of impurity, by default Decision Tree Classifier uses Gini impurity.
+-  This process of finding the decision rules that create splits to increase impurity is repeated recursively until all leaf nodes are pure or some arbitrary cut-off is reached. One of the advantages of decision tree classifiers is that we can visualize the entire trained model making decision trees one of the most interpretable models in machine learning. While this solution visualized a decision tree classifier, it can just as easily be used to visualize a decision tree regressor.
+
+- Reference:
+  - Machine Learning with Python Cookbook
