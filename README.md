@@ -394,3 +394,14 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
+
+[**Day28 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868901539273154560-Q7VV)
+
+**💡 Random Forest Classifier**:: 
+
+-  A common problem with decision trees is that they tend to fit the training data too closely (i.e., overfitting). This has motivated the widespread use of an ensemble learning method called random forest. In a random forest, many decision trees are trained, but each tree only receives a bootstrapped sample of observations and each node only considers a subset of features when determining the best split. 
+-  However, a random forest model is comprised of tens, hundreds, even thousands of decision trees. This makes a simple, intuitive visualization of a random forest model impractical. But, we can compare the relative importance of each feature. Features with splits that have the greater mean decrease in impurity (e.g. Gini impurity or entropy in classifiers and variance in regressors) are considered more important.However, there are two things to keep in mind regarding feature importance.
+-  First, scikit-learn requires that we break up nominal categorical features into multiple binary features. Second, if two features are highly correlated, one feature will claim much of the importance, making the other feature appear to be far less important. The higher the number, the more important the feature. By plotting these values we can add interpretability to our random forest models.
+
+- Reference:
+  - Machine Learning with Python Cookbook
