@@ -405,3 +405,22 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
+
+[**Day29 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869264271306563584-TBLP)
+
+**💡 Selecting Important Features using Random Forest**:: 
+
+-  In scikit-learn, we can use a simple two-stage workflow to create a model with reduced features. 
+
+            1. First, we train a random forest model using all features. 
+            2. Then, we use this model to identify the most important features. 
+            3. Next, we create a new feature matrix that includes only these features. 
+- It must be noted that there are two caveats to this approach:
+      
+      1. Nominal categorical features that have been one-hot encoded will see the feature importance diluted across the binary features.
+      2. The feature importance of highly correlated features will be effectively assigned to one feature and not evenly distributed across both features.
+
+- Reference:
+  - Machine Learning with Python Cookbook
+  - [Research paper on Variable selection using Random Forests](https://hal.archives-ouvertes.fr/file/index/docid/755489/filename/PRLv4.pdf)
+
