@@ -424,3 +424,16 @@
   - Machine Learning with Python Cookbook
   - [Research paper on Variable selection using Random Forests](https://hal.archives-ouvertes.fr/file/index/docid/755489/filename/PRLv4.pdf)
 
+[**Day30 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869628887819808769-W9wZ)
+
+**💡 Handling Imbalanced Classes**:: 
+
+-  Imbalanced classes are a common problem when we are doing machine learning in the real world. Left unaddressed, the presence of imbalanced classes can reduce the performance of our model. However, many learning algorithms in scikit-learn come with built-in methods for correcting imbalanced classes.
+-   We can set RandomForestClassifier to correct for imbalanced classes using the class_weight parameter. If supplied with a dictionary in the form of class names and respective desired weights, RandomFor estClassifier will weigh the classes accordingly. However, often a more useful argument is balanced, wherein classes are automatically weighted inversely proportional to how frequently they appear in the data as  
+
+            W(j) = n / (k * n(j)) 
+
+- Reference:
+  - Machine Learning with Python Cookbook
+  - [Research paper on Variable selection using Random Forests](https://hal.archives-ouvertes.fr/file/index/docid/755489/filename/PRLv4.pdf)
+
