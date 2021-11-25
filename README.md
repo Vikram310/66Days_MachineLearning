@@ -435,5 +435,3 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
-  - [Research paper on Variable selection using Random Forests](https://hal.archives-ouvertes.fr/file/index/docid/755489/filename/PRLv4.pdf)
-
