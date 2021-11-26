@@ -435,3 +435,28 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
+
+[**Day31 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869983202891698176-LMUl)
+
+**💡 Adaboost Classifier**:: 
+
+- In a random forest, an ensemble (group) of randomized decision trees predicts the target of a vector. An alternative, and often more powerful, approach is called boosting. In Adaboost, we iteratively train a series of weak models, each iteration giving higher priority to observations the previous model predicted incorrectly.
+- Steps followed in Adaboost:
+
+      1. Assign every observation, xi, an initial weight value, wi = 1 n, where n is the total number of observations in the data. 
+      2. Train a “weak” model on the data. 
+      3. For each observation: 
+           a. If the weak model predicts xi correctly, wi is increased. 
+           b. If the weak model predicts xi incorrectly, wi is decreased. 
+      4. Train a new weak model where observations with greater wi are given greater priority. 
+      5. Repeat steps 4 and 5 until the data is perfectly predicted or a preset number of weak models has been trained
+
+- The end result is an aggregated model where individual weak models focus on more difficult observations. In scikit-learn, we can implement AdaBoost using AdaBoostClassifier or AdaBoostRegressor. The most important parameters are base_estimator, n_estimators, and learning_rate: 
+
+      1. base_estimator is the learning algorithm to use to train the weak models. 
+      2. n_estimators is the number of models to iteratively train.
+      3. learning_rate is the contribution of each model to the weights and defaults to 1.
+      4. loss is exclusive to AdaBoostRegressor and sets the loss function to use when updating weights. 
+
+- Reference:
+  - Machine Learning with Python Cookbook
