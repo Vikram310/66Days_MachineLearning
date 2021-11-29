@@ -460,3 +460,16 @@
 
 - Reference:
   - Machine Learning with Python Cookbook
+
+[**Day32 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871073558047682560-bfLd)
+
+**💡 Performance measures of classifier**:: 
+
+- A good way to evaluate a model's accuracy is to use cross-validation. We use the cross_val_score() function to evaluate the model using K-fold cross-validation. But accuracy is not a preferred metric when classifying in predictive analytics. This is because a simple model may have a high level of accuracy but be too crude to be useful. This is known as Accuracy Paradox 
+
+-A much better way to evaluate the performance of a classifier is to look at the confusion matrix. The general idea is to count the number of times instances of class A are classified as class B. Each row in a confusion matrix represents an actual class, while each column represents a predicted class.  A perfect classifier would have only true positives and true negatives, so its confusion matrix would have nonzero values only on its main diagonal. Confusion matrix gives us a lot of information, two of those are precision and recall. 
+
+-Precision is defined as the fraction of relevant instances among all retrieved instances. Recall, sometimes referred to as ‘sensitivity, is the fraction of retrieved instances among all relevant instances. A perfect classifier has precision and recall both equal to 1.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
