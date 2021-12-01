@@ -376,7 +376,7 @@
 
 [**Day26 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868180581071646720-HkAR)
 
-**💡 Reducing Variance usign Regularization**:: 
+**💡 Reducing Variance usign Regularization**: 
 
 - Regularized regression learners are similar to standard ones, except they attempt to minimize RSS and some penalty for the total size of the coefficient values, called a shrinkage penalty because it attempts to “shrink” the model. There are two common types of regularized learners for linear regression: Ridge regression and Lasso Regression. The only formal difference is the type of shrinkage penalty used.
 - In Ridge regression, the shrinkage penalty is a tuning hyperparameter multiplied by the squared sum of all coefficients, whereas in Lasso regression, shrinkage penalty is a tuning hyperparameter multiplied by the sum of the absolute value of all coefficients. As a very general rule of thumb, ridge regression often produces slightly better predictions than lasso, but lasso produces more interpretable models.
@@ -387,7 +387,7 @@
 
 [**Day27 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868547393386885120-ch0P)
 
-**💡 Decision Tree Classifier**:: 
+**💡 Decision Tree Classifier**:
 
 -  In a decision tree, every decision rule occurs at a decision node, with the rule creating branches leading to new nodes. One reason for the popularity of tree-based models is their interpretability. In fact, decision trees can literally be drawn out in their complete form to create a highly intuitive model. Decision tree learners attempt to find a decision rule that produces the greatest decrease in impurity at a node. While there are a number of measurements of impurity, by default Decision Tree Classifier uses Gini impurity.
 -  This process of finding the decision rules that create splits to increase impurity is repeated recursively until all leaf nodes are pure or some arbitrary cut-off is reached. One of the advantages of decision tree classifiers is that we can visualize the entire trained model making decision trees one of the most interpretable models in machine learning. While this solution visualized a decision tree classifier, it can just as easily be used to visualize a decision tree regressor.
@@ -397,7 +397,7 @@
 
 [**Day28 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6868901539273154560-Q7VV)
 
-**💡 Random Forest Classifier**:: 
+**💡 Random Forest Classifier**: 
 
 -  A common problem with decision trees is that they tend to fit the training data too closely (i.e., overfitting). This has motivated the widespread use of an ensemble learning method called random forest. In a random forest, many decision trees are trained, but each tree only receives a bootstrapped sample of observations and each node only considers a subset of features when determining the best split. 
 -  However, a random forest model is comprised of tens, hundreds, even thousands of decision trees. This makes a simple, intuitive visualization of a random forest model impractical. But, we can compare the relative importance of each feature. Features with splits that have the greater mean decrease in impurity (e.g. Gini impurity or entropy in classifiers and variance in regressors) are considered more important.However, there are two things to keep in mind regarding feature importance.
@@ -408,7 +408,7 @@
 
 [**Day29 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869264271306563584-TBLP)
 
-**💡 Selecting Important Features using Random Forest**:: 
+**💡 Selecting Important Features using Random Forest**: 
 
 -  In scikit-learn, we can use a simple two-stage workflow to create a model with reduced features. 
 
@@ -426,7 +426,7 @@
 
 [**Day30 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869628887819808769-W9wZ)
 
-**💡 Handling Imbalanced Classes**:: 
+**💡 Handling Imbalanced Classes**: 
 
 -  Imbalanced classes are a common problem when we are doing machine learning in the real world. Left unaddressed, the presence of imbalanced classes can reduce the performance of our model. However, many learning algorithms in scikit-learn come with built-in methods for correcting imbalanced classes.
 -   We can set RandomForestClassifier to correct for imbalanced classes using the class_weight parameter. If supplied with a dictionary in the form of class names and respective desired weights, RandomFor estClassifier will weigh the classes accordingly. However, often a more useful argument is balanced, wherein classes are automatically weighted inversely proportional to how frequently they appear in the data as  
@@ -438,7 +438,7 @@
 
 [**Day31 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6869983202891698176-LMUl)
 
-**💡 Adaboost Classifier**:: 
+**💡 Adaboost Classifier**:
 
 - In a random forest, an ensemble (group) of randomized decision trees predicts the target of a vector. An alternative, and often more powerful, approach is called boosting. In Adaboost, we iteratively train a series of weak models, each iteration giving higher priority to observations the previous model predicted incorrectly.
 - Steps followed in Adaboost:
@@ -463,7 +463,7 @@
 
 [**Day32 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871073558047682560-bfLd)
 
-**💡 Performance measures of classifier**:: 
+**💡 Performance measures of classifier**: 
 
 - A good way to evaluate a model's accuracy is to use cross-validation. We use the cross_val_score() function to evaluate the model using K-fold cross-validation. But accuracy is not a preferred metric when classifying in predictive analytics. This is because a simple model may have a high level of accuracy but be too crude to be useful. This is known as Accuracy Paradox 
 - A much better way to evaluate the performance of a classifier is to look at the confusion matrix. The general idea is to count the number of times instances of class A are classified as class B. Each row in a confusion matrix represents an actual class, while each column represents a predicted class.  A perfect classifier would have only true positives and true negatives, so its confusion matrix would have nonzero values only on its main diagonal. Confusion matrix gives us a lot of information, two of those are precision and recall. 
@@ -474,7 +474,7 @@
 
 [**Day33 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871435103684435968-9gA1)
 
-**💡 Precision-recall Tradeoff**:: 
+**💡 Precision-recall Tradeoff**: 
 
 - The precision-recall trade-off can be an essential tool when precision is more important than recall or vice versa.In the context of machine learning, precision and recall are metrics of performance for classification algorithms. Consider a classification task with two classes. 
 - Precision is how many times an accurate prediction of a particular class occurs per a false prediction of that class. Recall is the percentage of the data belonging to a particular class which the model properly predicts as belonging to that class. The Idea behind the precision-recall trade-off is that when the threshold is changed for determining if a class is positive or negative it will tilt the scales. Increasing the threshold will decrease recall and increase precision whereas, Decreasing the threshold will increase recall and decrease precision.
@@ -484,7 +484,7 @@
 
 [**Day34 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871799471076978688-Vw3m)
 
-**💡 ROC Curve**:: 
+**💡 ROC Curve**: 
 
 - The receiver operating characteristic (ROC) curve is another common tool used with binary classifiers. It is very similar to the precision/recall curve. ROC curve plots the true positive rate(TPR) against the false-positive rate(FPR), Instead of plotting precision versus recall. The FPR is the ratio of negative instances that are incorrectly classified as positive.
 - There is a tradeoff in this curve too: the higher the recall(TPR), the more false positives (FPR) the classifier produces. A good classifier stays as far away i.e. it is more towards the top-left corner of the plot) One way to compare classifiers is to measure the area under the curve (AUC). A perfect classifier will have a ROC AUC equal to 1, whereas a purely random classifier will have a ROC AUC equal to 0.5.
