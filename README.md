@@ -466,10 +466,30 @@
 **💡 Performance measures of classifier**:: 
 
 - A good way to evaluate a model's accuracy is to use cross-validation. We use the cross_val_score() function to evaluate the model using K-fold cross-validation. But accuracy is not a preferred metric when classifying in predictive analytics. This is because a simple model may have a high level of accuracy but be too crude to be useful. This is known as Accuracy Paradox 
-
 - A much better way to evaluate the performance of a classifier is to look at the confusion matrix. The general idea is to count the number of times instances of class A are classified as class B. Each row in a confusion matrix represents an actual class, while each column represents a predicted class.  A perfect classifier would have only true positives and true negatives, so its confusion matrix would have nonzero values only on its main diagonal. Confusion matrix gives us a lot of information, two of those are precision and recall. 
-
 - Precision is defined as the fraction of relevant instances among all retrieved instances. Recall, sometimes referred to as ‘sensitivity, is the fraction of retrieved instances among all relevant instances. A perfect classifier has precision and recall both equal to 1.
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day33 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871435103684435968-9gA1)
+
+**💡 Precision-recall Tradeoff**:: 
+
+- The precision-recall trade-off can be an essential tool when precision is more important than recall or vice versa.In the context of machine learning, precision and recall are metrics of performance for classification algorithms. Consider a classification task with two classes. 
+- Precision is how many times an accurate prediction of a particular class occurs per a false prediction of that class. Recall is the percentage of the data belonging to a particular class which the model properly predicts as belonging to that class. The Idea behind the precision-recall trade-off is that when the threshold is changed for determining if a class is positive or negative it will tilt the scales. Increasing the threshold will decrease recall and increase precision whereas, Decreasing the threshold will increase recall and decrease precision.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day34 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6871799471076978688-Vw3m)
+
+**💡 ROC Curve**:: 
+
+- The receiver operating characteristic (ROC) curve is another common tool used with binary classifiers. It is very similar to the precision/recall curve. ROC curve plots the true positive rate(TPR) against the false-positive rate(FPR), Instead of plotting precision versus recall. The FPR is the ratio of negative instances that are incorrectly classified as positive.
+- There is a tradeoff in this curve too: the higher the recall(TPR), the more false positives (FPR) the classifier produces. A good classifier stays as far away i.e. it is more towards the top-left corner of the plot) One way to compare classifiers is to measure the area under the curve (AUC). A perfect classifier will have a ROC AUC equal to 1, whereas a purely random classifier will have a ROC AUC equal to 0.5.
+- As a rule of thumb, one should prefer the PR curve whenever the positive class is rare or when you care more about the false positives than the false negatives, and the ROC curve otherwise. 
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
