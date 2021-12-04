@@ -520,3 +520,24 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+**Day37 of 66DaysOfData!**
+
+**💡 Logistic Regression**: 
+
+- Logistic regression is a classification model that is very easy to implement but performs very well on linearly separable classes. Logistic Regression is  a linear model for binary classification that can be extended to multiclass classification using the OvR technique (One-vs-Rest)
+- Just like a Linear Regression model, a Logistic Regression model computes a weighted sum of the input features (plus a bias term), but instead of outputting the result directly like the Linear Regression model does, it outputs the logistic of this result, which is given by a sigmoid function. 
+- Assumptions of Logistic Regression:
+
+      1. Logistic regression assumes that the outcome variable is binary, where the number of outcomes is two. 
+      2. Relationship between the Logit of the outcome and each continuous independent variable is linear. 
+      3. It assumes that there are no highly influential outlier data points, as they distort the outcome and accuracy of the model.
+- Evaluation of Logistic Regression Model:
+
+      1. AIC (Akaike Information Criteria)
+      2. Null Deviance and Residual Deviance
+      3. Confusion Matrix
+      4. ROC Curve 
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
