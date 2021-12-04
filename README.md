@@ -515,7 +515,7 @@
 
 - SVM chooses the extreme points/vectors that help in creating the hyperplane. These extreme cases are called as support vectors, and hence algorithm is termed as Support Vector Machine. The SVM classifier which fits the widest possible street between the classes. This is called large margin classification.  There are two main issues with hard margin classification. First, it only works if the data is linearly separable, and second it is quite sensitive to outliers.
 
-• To avoid these issues it is preferable to use a more flexible model. The objective is to find a good balance between keeping the street as large as possible and limiting the margin violations This is called soft margin classification
+- To avoid these issues it is preferable to use a more flexible model. The objective is to find a good balance between keeping the street as large as possible and limiting the margin violations This is called soft margin classification
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
