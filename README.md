@@ -541,7 +541,7 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
-**Day38 of 66DaysOfData!**
+[**Day38 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6873252605414510592-mfct)
 
 **💡 Naive Bayes Classifier**: 
 
