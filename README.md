@@ -520,7 +520,7 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
-**Day37 of 66DaysOfData!**
+[**Day37 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6872955098474143744-6a45)
 
 **💡 Logistic Regression**: 
 
@@ -540,4 +540,18 @@
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+**Day38 of 66DaysOfData!**
+
+**💡 Naive Bayes Classifier**: 
+
+- It is a classification technique based on the Bayes Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes Classifier assumes that the presence of a particular feature is unrelated to the presence of any other feature. Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c).
+
+- The most common type of naive Bayes classifier is the Gaussian naive Bayes. In Gaussian naive Bayes, we assume that the likelihood of the feature values, x, given observation is of class y, follows a normal distribution. One of the interesting aspects of naive Bayes classifiers is that they allow us to assign a prior belief over the respected target classes, which can be done using the Priors parameter
+
+- Multinomial naive Bayes works similarly to Gaussian naive Bayes, but the features are assumed to be multinomially distributed. In practice, this means that this classifier is commonly used when we have discrete data. The Bernoulli naive Bayes classifier assumes that all our features are binary such that they take only two values. Like its multinomial cousin, Bernoulli naive Bayes is often used in text classification
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
 
