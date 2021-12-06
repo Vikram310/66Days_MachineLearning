@@ -554,4 +554,26 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day39 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6873604916418633728-oncj)
 
+**💡 K-Means Clustering**: 
+
+- • The goal of clustering is to find a natural grouping in data so that items in the same cluster are more similar to each other than to those from different cluster. The K - Means algorithm belongs to the category of prototype-based clustering, which means that each cluster is represented by a prototype, which is usually either the centroid (average) of similar points with continuous features, or the medoid in the case of categorical features.
+
+- Steps in K-Means:
+
+      1. Randomly pick k centroids from the examples as initial cluster centers.
+      2. Assign each example to the nearest centroid.
+      3. Move the centroids to the center of the examples that were assigned to them.
+      4. Repeat steps 2 and 3 until the cluster assignments do not change or a user-defined tolerance or a maximum number of iterations is reached.
+
+- The Elbow method is one of the most popular ways to find the optimal number of clusters. This method uses the concept of WCSS value. WCSS stands for Within Cluster Sum of Squares, which defines the total variations within a cluster. 
+- Silhouette Scores to validate the clusters, which uses the euclidean method for calculating the distance
+
+      1. Silhouette values lie in the range of -1 to +1. The value of +1 is ideal and -1 is the least preferred
+      2. Value of +1 indicates the sample is far away from its neighboring cluster and very close to the cluster it is assigned
+      3. Value of -1 indicates the sample is close to the neighboring cluster than to the cluster it is assigned
+      4. Value of 0 means it's at the boundary of the distance
+
+- Reference:
+  - Python Machine Learning
