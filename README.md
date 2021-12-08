@@ -589,7 +589,7 @@
       2. Assign all of the observations to a single cluster and then partition the cluster to two least similar clusters.
       3. Proceed recursively on each cluster until there is one cluster for each observation
       4. Produce more accurate hierarchies than agglomerative in some circumstances but are conceptually more complex.
--Agglomerative Clustering:
+- Agglomerative Clustering:
       
       1. Bottom-up clustering method
       2. Assign each observation to its own cluster
