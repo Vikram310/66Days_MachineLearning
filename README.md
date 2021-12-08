@@ -577,3 +577,58 @@
 
 - Reference:
   - Python Machine Learning
+
+[**Day40 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6873964910234226688-pDUq)
+
+**💡 Hierarchical Clustering**: 
+
+- Hierarchical clustering is another unsupervised machine learning algorithm, which is used to group the unlabeled datasets into a cluster. It is of two types
+- 𝐃𝐢𝐯𝐢𝐬𝐢𝐯𝐞 𝐂𝐥𝐮𝐬𝐭𝐞𝐫𝐢𝐧𝐠:
+  
+      1. Top down clustering method
+      2. Assign all of the observations to a single cluster and then partition the cluster to two least similar clusters.
+      3. Proceed recursively on each cluster until there is one cluster for each observation
+      4. Produce more accurate hierarchies than agglomerative in some circumstances but are conceptually more complex.
+-Agglomerative Clustering:
+      
+      1. Bottom-up clustering method
+      2. Assign each observation to its own cluster
+      3. Compute the similarity between each of the clusters and join the two most similar clusters
+- Methods to compute the distance between clusters/points:
+
+      𝐒𝐢𝐧𝐠𝐥𝐞 𝐋𝐢𝐧𝐤𝐚𝐠𝐞: Distance between two clusters is defined as shortest distance between two points in each cluster
+      𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞 𝐋𝐢𝐧𝐤𝐚𝐠𝐞: Distance between two clusters is defined as longest distance between two points in each cluster
+      𝐀𝐯𝐞𝐫𝐚𝐠𝐞 𝐋𝐢𝐧𝐤𝐚𝐠𝐞: Distance between two clusters is defined a the average distance between each point in one cluster to every point in the other cluster
+
+- We use Dendrograms to compute the optimal number of clusters in Hierarchical Clustering. It is a diagram that shows the hierarchical relationship between objects. It is most commonly created as an output from hierarchical clustering. The main use of dendrogram is to work out the best way to allocate objects to clusters. Whenever the Data is in spherical shape, K-Means is preferred, whereas the Hierarchical clustering is highly  preferred for social networking analysis
+
+- Reference:
+  - Python Machine Learning
+
+[**Day41 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6874329215781736448-Q3PA)
+
+**💡 DBSCAN Clustering**: 
+
+- DBSCAN stands for Density-based spatial clustering of applications with noise. It is able to find arbitrary shaped clusters and clusters with noise (i.e. outliers).The main idea behind DBSCAN is that a point belongs to a cluster if it is close to many points from that cluster. It has two main parameters:
+- EPS
+
+      It specifies how close points should be to each other to be considered a part of a cluster.
+      This value will be considered as a threshold for considering two points as a Neighbor
+- minPts:
+      
+      It is the minimum number of points to form a dense region.
+      Generally, the Number of minPts is equal to twice the numbers of columns in dataset
+- There are three types of points after the DBSCAN clustering is complete:
+      
+      1. Core: It is a point that has at least m points within distance n from itself
+      2. Border: This is a point that has at least one core point at a distance n
+      3. Noise: which is a point that is neither a core nor a border and it has less than m points within distance n from itself.
+- Steps in DBSCAN Algorithm:
+
+      1. Find all the neighbor points within eps and identify the core points or visited with more than minPts neighbors
+      2. For each core point if it is not assigned to a cluster, create a new cluster
+      3. Find recursively all its density connected points and assign them to the same cluster as the core point.
+      4. Iterate through the remaining unvisited points in the dataset. Those points that don't belong to any cluster are noise
+
+- Reference:
+  - Python Machine Learning
