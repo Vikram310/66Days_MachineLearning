@@ -663,13 +663,16 @@
       3. The choice of model to use.
 - Monitoring Performance:
 
-      The performance of the model must be monitored during training. This requires the choice of a dataset that is used to evaluate the model and a metric used to evaluate the model. Performance of the model is evaluated on the validation set at the end of each epoch, which adds an additional computational cost during training.
+      The performance of the model must be monitored during training. This requires the choice of a dataset that is used to evaluate the model and a metric used to evaluate the model. 
+      Performance of the model is evaluated on the validation set at the end of each epoch, which adds an additional computational cost during training.
 - Early Stopping Trigger:
 
-      Once a scheme for evaluating the model is selected, a trigger for stopping the training process must be chosen. The trigger will use a monitored performance metric to decide when to stop training. This is often the performance of the model on the holdout dataset, such as the loss.
+      Once a scheme for evaluating the model is selected, a trigger for stopping the training process must be chosen. The trigger will use a monitored performance metric to decide when to stop training. 
+      This is often the performance of the model on the holdout dataset, such as the loss.
 - Model Choice:
 
-      As such, some consideration may need to be given as to exactly which model is saved. Specifically, the training epoch from which weights in the model that are saved to file. This will depend on the trigger chosen to stop the training process.
+      As such, some consideration may need to be given as to exactly which model is saved. Specifically, the training epoch from which weights in the model that are saved to file. 
+      This will depend on the trigger chosen to stop the training process.
 - For example, If the trigger is required to observe a decrease in performance over a fixed number of epochs, then the model at the beginning of the trigger period will be preferred.
 
 - Reference:
