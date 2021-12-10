@@ -632,3 +632,46 @@
 
 - Reference:
   - Python Machine Learning
+
+[**Day42 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6874692912924491776-l_pD)
+
+**💡 Bias - Variance TradeOff**: 
+
+- An important theoretical result of statistics and Machine Learning is the fact that a model’s generalization error can be expressed as the sum of three very different errors:
+- Bias :
+
+      Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. This part of the generalization error is due to wrong assumptions, such as assuming that the data is linear when it is actually quadratic. A high-bias model is most likely to underfit the training data.
+- Variance:
+
+      Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. This part is due to the model’s excessive sensitivity to small variations in the training data. A model with many degrees of freedom (such as a high-degree polynomial model) is likely to have high variance, and thus to overfit the training data.
+- Irreducible error:
+
+      This part is due to the noisiness of the data itself. The only way to reduce this part of the error is to clean up the data (e.g., fix the data sources, such as broken sensors, or detect and remove outliers).
+- Increasing a model’s complexity will typically increase its variance and reduce its bias. Conversely, reducing a model’s complexity increases its bias and reduces its variance. This is why it is called a tradeoff.
+
+- Reference:
+  - Python Machine Learning
+
+[**Day43 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6875057106718982144-JDip)
+
+**💡 Early Stopping**: 
+
+- A very different way to regularize iterative learning algorithms such as Gradient Descent is to stop training as soon as the validation error reaches a minimum. This is called early stopping. When training the network, a larger number of training epochs is used than may normally be required, to give the network plenty of opportunity to fit, then begin to overfit the training dataset. There are three elements to using early stopping:
+
+      1. Monitoring model performance.
+      2. Trigger to stop training.
+      3. The choice of model to use.
+- Monitoring Performance:
+
+      The performance of the model must be monitored during training. This requires the choice of a dataset that is used to evaluate the model and a metric used to evaluate the model. Performance of the model is evaluated on the validation set at the end of each epoch, which adds an additional computational cost during training.
+- Early Stopping Trigger:
+
+      Once a scheme for evaluating the model is selected, a trigger for stopping the training process must be chosen. The trigger will use a monitored performance metric to decide when to stop training. This is often the performance of the model on the holdout dataset, such as the loss.
+- Model Choice:
+
+      As such, some consideration may need to be given as to exactly which model is saved. Specifically, the training epoch from which weights in the model that are saved to file. This will depend on the trigger chosen to stop the training process.
+- For example, If the trigger is required to observe a decrease in performance over a fixed number of epochs, then the model at the beginning of the trigger period will be preferred.
+
+- Reference:
+  - Python Machine Learning
+
