@@ -684,9 +684,8 @@
 
 - Gradient Descent is a very generic optimization algorithm capable of finding optimal solutions to a wide range of problems. The general idea of Gradient Descent is to tweak parameters iteratively in order to minimize a cost function. It measures the local gradient of the error function with regards to the parameter vector and it goes in direction of descending gradient. We reach the minimum once it is zero. We start by filling theta value with random values, which is called random initialization and then we improve it gradually taking one baby step at a time. 
 - Learning rate determines the size of step which should be taken by Gradient Descent. If the learning rate is too small, the algorithm takes a long time to reach the minimum, and, on the other hand, if it is too large, it may cross the minimum in the first iteration.When using Gradient Descent, all the features must be on the same scale, they need to be standardized or else it will take much longer to converge. 
-**💡Batch Gradient Descent**:
 
-- Unlike Gradient Descent, Batch GD takes whole training data at every step. As a result, it takes a longer time to train when the size of the training set is large.
+**💡Batch Gradient Descent**: Unlike Gradient Descent, Batch GD takes whole training data at every step. As a result, it takes a longer time to train when the size of the training set is large.
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
