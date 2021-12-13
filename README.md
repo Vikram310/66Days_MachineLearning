@@ -690,3 +690,25 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day45 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6875841095528542208-zOxt)
+
+**💡 Stochastic Gradient Descent**: 
+
+- The main problem of Batch Gradient Descent is, it is very slow when the training set is large. To overcome this problem, we use Stochastic Gradient Descent.Stochastic GD just picks a random instance in the training set at every step and computes gradients based only on that single instance. Due to its stochastic nature, this is much less regular than Batch GD
+- Instead of gently decreasing until it reaches the minimum, the cost function will bounce up and down, decreasing only on average. With this irregularity, stochastic has a better chance of finding a Global minimum compared to a local minimum.The function that determines the learning rate at each iteration is called the learning schedule. When using Stochastic GD, the training instances must be independent and identically distributed to ensure that parameters get pulled towards global minimum on average. A simple way to ensure this is to shuffle the instances during the training.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day46 of 66DaysOfData!**]()
+
+**💡 Perceptron**: 
+
+- The Perceptron is one of the simplest ANN architectures, based on a slightly different artificial neuron, a threshold logic unit (TLU), or a linear threshold unit (LTU): the inputs and output are now numbers and each input connection is associated with a weight. The TLU computes a weighted sum of its inputs, then applies a step function to that sum and outputs the result. 
+- A single TLU can be used for simple linear binary classification. It computes a linear combination of the inputs and if the result exceeds a threshold, it outputs the positive class or else outputs the negative class. A Perceptron is simply composed of a single layer of TLUs,6 with each TLU connected to all the inputs. When all the neurons in a layer are connected to every neuron in the previous layer, it is called a fully connected layer or a dense layer.
+- The perceptron is trained on perceptron training algorithm proposed by Frank Rosenblatt based on Hebb's rule: that is, the connection weight between two neurons is increased whenever they have the same output.Perceptron are trained using a variant of this rule that takes into account the error made by the network; it reinforces connections that help reduce the error. More specifically, the Perceptron is fed one training instance at a time, and for each instance it makes its predictions. For every  output neuron that produced a wrong prediction, it reinforces the connection weights from the inputs that would have contributed to the correct prediction.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+
