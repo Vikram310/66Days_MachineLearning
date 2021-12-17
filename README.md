@@ -711,4 +711,74 @@
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day47 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6876502156015472640-7zaN)
+
+**💡 K-Fold Cross Validation**: 
+
+- The validation approach which we use on general basis (building on training data and testing on test data) has two major weaknesses:
+
+      1. First, the performance of the model can be highly dependent on which few observations were selected for the test set. 
+      2. Second, the model is not being trained using all the available data, and not being evaluated on all the available data.
+- A better strategy, which overcomes these weaknesses, is called k-fold cross-validation (KFCV).  In KFCV, we split the data into k parts called “folds.” The model is then trained using k – 1 folds combined into one training set and then the last fold is used as a test set. We repeat this k times, each time using a different fold as the test set. The performance on the model for each of the k iterations is then averaged to produce an overall measurement.
+- There are three important points to consider when we are using KFCV. 
+
+      1. First, KFCV assumes that each observation was created independent from the other (i.e., the data is independent identically distributed [IID]). If the data is IID, it is a good idea to shuffle observations when assigning to folds. 
+
+      2. Second, when we are using KFCV to evaluate a classifier, it is often beneficial to have folds containing roughly the same percentage of 
+observations from each of the different target classes (called stratified k-fold).
+
+      3. Finally, when we are using validation sets or cross-validation, it is important to pre-process data based on the training set and then apply those transformations to both the training and test set. The reason for this is because we are pretending that the test set is unknown data. 
+
+- If we fit both our preprocessors using observations from both training and test sets, some of the information from the test set leaks into our training set. This rule applies for any preprocessing step such as feature selection.
+- cross_val_score() comes with three parameters:
+
+      1. cv determines our cross-validation technique. K-fold is the most common
+      2. The scoring parameter defines our metric for success, 
+      3. n_jobs=-1 tells scikit-learn to use every core available.
+
+- Reference:
+  - ML Cookbook
+
+[**Day48 and 49 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6877215989675778048-6dWa)
+
+**💡 Creating a Baseline Regression Model for Model Evaluation**: 
+
+- "DummyRegressor" allows us to create a very simple model that we can use as a baseline to compare against our actual model. This can often be useful to simulate a “naïve” existing prediction process in a product or system."DummyRegressor" uses the strategy parameter to set the method of making predictions, including the mean or median value in the training set. 
+- Furthermore, if we set strategy to constant and use the constant parameter, we can set the dummy regressor to predict some constant value for every observation. By default, score returns the coefficient of determination (R-squared, R2) score. The closer R2 is to 1, the more of the variance in the target vector that is explained by the features.
+
+**💡 Creating a Baseline Classification Model for Model Evaluation**: 
+
+- A common measure of a classifier’s performance is how much better it is than random guessing. "DummyClassifier" makes this comparison easy. The strategy parameter gives us a number of options for generating values. There are two particularly useful strategies:
+
+      First, stratified makes predictions that are proportional to the training set’s target vector’s class proportions.
+      Second, uniform will generate predictions uniformly at random between the different classes.
+
+- Reference:
+  - ML Cookbook
+
+[**Day50 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6877584384191545345-1KIq)
+
+**💡 Back propagation**: 
+
+- Back propagation, in short, it is simply Gradient Descent using an effective technique for computing the gradients automatically: in just two passes through the network (one forward, one backward) the backpropagation algorithm is able to compute the gradient of the network’s error with regards to every single model parameter. Backpropagation is done in following steps:
+
+1. It handles one mini-batch at a time (for example containing 32 instances each), and it goes through the full training set multiple times. Each pass is called an epoch
+
+2. Each mini-batch is passed to the network’s input layer, which just sends it to the first hidden layer. The algorithm then computes the output of all the neurons in this layer. The result is passed on to the
+next layer, its output is computed and passed to the next layer, and so on until we get the output of the last layer, the output layer. This is the forward pass.
+
+3. Next, the algorithm measures the network’s output error (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error).
+
+4. Then it computes how much each output connection contributed to the error. This is done analytically by simply applying the chain rule, which makes this step fast and precise.
+
+5. The algorithm then measures how much of these error contributions came from each connection in the layer below, again using the chain rule and so on until the algorithm reaches the input layer.
+
+6. This reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network.
+
+7. Finally, the algorithm performs a Gradient Descent step to tweak all the connection weights in the network, using the error gradients it just computed.
+
+- It is important to initialize all the hidden layers connection weights randomly or else training will fail. In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart.If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
