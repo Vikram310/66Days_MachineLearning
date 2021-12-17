@@ -724,8 +724,7 @@
 
       1. First, KFCV assumes that each observation was created independent from the other (i.e., the data is independent identically distributed [IID]). If the data is IID, it is a good idea to shuffle observations when assigning to folds. 
 
-      2. Second, when we are using KFCV to evaluate a classifier, it is often beneficial to have folds containing roughly the same percentage of 
-observations from each of the different target classes (called stratified k-fold).
+      2. Second, when we are using KFCV to evaluate a classifier, it is often beneficial to have folds containing roughly the same percentage of observations from each of the different target classes (called stratified k-fold).
 
       3. Finally, when we are using validation sets or cross-validation, it is important to pre-process data based on the training set and then apply those transformations to both the training and test set. The reason for this is because we are pretending that the test set is unknown data. 
 
