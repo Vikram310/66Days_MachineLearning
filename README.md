@@ -793,13 +793,10 @@ next layer, its output is computed and passed to the next layer, and so on until
       3. Non-linear Activation Function
 
 - Binary Step Function:
-
       It is basically a threshold base classifier, in this, we decide some threshold value to decide output that neuron should be activated or deactivated.  It thresholds the input values to 1 and 0, if they are greater or less than zero, respectively.
 - Linear Activation Function:
-
       It is a simple straight line activation function where our function is directly proportional to the weighted sum of neurons or input. Linear activation functions are better in giving a wide range of activations and a line of a positive slope may increase the firing rate as the input rate increases.
 - Non-Linear Activation Function:
-      
       Modern neural network models use non-linear activation functions. They allow the model to create complex mappings between the network’s inputs and outputs, such as images, video, audio, and data sets that are non-linear or have high dimensionality. 
 
 - Reference:
