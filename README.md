@@ -781,3 +781,27 @@ next layer, its output is computed and passed to the next layer, and so on until
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day51 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6877961938559741952-B6Sw)
+
+**💡 Activation Function**: 
+
+- Activation functions are mathematical equations that determine the output of a neural network model. Activation functions also have a major effect on the neural network’s ability to converge and the convergence speed, or in some cases, activation functions might prevent neural networks from converging in the first place. Activation function also helps to normalize the output of any input in the range between 1 to -1 or 0 to 1. Activation function must be efficient and it should reduce the computation time because the neural network sometimes trained on millions of data points.
+- Types of Activation Functions:
+
+      1. Binary Step Function
+      2. Linear Activation Function
+      3. Non-linear Activation Function
+
+- Binary Step Function:
+
+      It is basically a threshold base classifier, in this, we decide some threshold value to decide output that neuron should be activated or deactivated.  It thresholds the input values to 1 and 0, if they are greater or less than zero, respectively.
+- Linear Activation Function:
+
+      It is a simple straight line activation function where our function is directly proportional to the weighted sum of neurons or input. Linear activation functions are better in giving a wide range of activations and a line of a positive slope may increase the firing rate as the input rate increases.
+- Non-Linear Activation Function:
+      
+      Modern neural network models use non-linear activation functions. They allow the model to create complex mappings between the network’s inputs and outputs, such as images, video, audio, and data sets that are non-linear or have high dimensionality. 
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
