@@ -826,3 +826,23 @@ next layer, its output is computed and passed to the next layer, and so on until
 
 - Leaky ReLU function is an improved version of the ReLU activation function. As for the ReLU activation function, the gradient is 0 for all the values of inputs that are less than zero, which would deactivate the neurons in that region and may cause dying ReLU problem.Leaky ReLU is defined to address this problem. Instead of defining the ReLU activation function as 0 for negative values of inputs(x), we define it as an extremely small linear component of x.
 - This function returns x if it receives any positive input, but for any negative value of x, it returns a really small value which is 0.01 times x. Thus it gives an output for negative values as well. By making this small modification, the gradient of the left side of the graph comes out to be a non zero value. Hence we would no longer encounter dead neurons in that region.
+
+[**Day54 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedin-datawithvikram-activity-6879039241662402561-PKaR)
+
+**💡 Regression MLP**: 
+
+- MLPs can be used for regression tasks. If you want to predict a single value, then you just need a single output neuron: its output is the predicted value. For multivariate regression, you need one output neuron per output dimension. For example, to locate the center of an object on an image, you need to predict 2D coordinates, so you need two output neurons.
+- In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values. However, if you want to  guarantee that the output will always be positive, then you can use the ReLU activation function in the output layer.If we want to guarantee that the predictions will fall within a given range of values, then you can use the logistic function or the hyperbolic tangent, and scale the labels to the appropriate range: 0 to 1 for the logistic function, or –1 to 1 for the hyperbolic tangent.
+- The loss function to use during training is typically the mean squared error, but if you have a lot of outliers in the training set, you may prefer to use the mean absolute error instead.  Alternatively, you can use the Huber loss, which is a combination of both.
+**💡 Typical Regression MLP Architecture**: 
+      
+      1. Input neurons: One per input feature 
+      2. Hidden layers: Depends on the problem(Typically 1 to 5)
+      3. Neurons per hidden layer: Depends on the problem (10 to 100)
+      4. Output neurons: 1 per prediction dimension
+      5. Hidden activation:  ReLU 
+      6. Output activation: None or ReLU/Softplus (if positive outputs) or Logistic/Tanh (if bounded outputs)
+      7. Loss function MSE or MAE/Huber (if outliers)
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
