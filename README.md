@@ -802,3 +802,27 @@ next layer, its output is computed and passed to the next layer, and so on until
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day52 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6878313561433735168-jVQ-)
+
+**💡 Sigmoid Function**: 
+
+- Sigmoid Activation function is very simple which takes a real value as input and gives probability that ‘s always between 0 or 1. It looks like ‘S’ shape.It’s non-linear, continuously differentiable, monotonic, and has a fixed output range. Main advantage is simple and good for classifier. But Big disadvantage of the function is that it It gives rise to a problem of “vanishing gradients” because Its output isn’t zero centered. It makes the gradient updates go too far in different directions. 0 < output < 1, and it makes optimization harder. That takes very high computational time in hidden layer of neural network.
+
+**💡 Softmax Function**:
+
+- The softmax function is a function that turns a vector of K real values into a vector of K real values that sum to 1. The softmax transforms the input values into values between 0 and 1, so that they can be interpreted as probabilities. Generally, we use the function at last layer of neural network which calculates the probabilities distribution of the event over ’n’ different events. The main advantage of the function is able to handle multiple classes.
+
+**💡 Tanh Function**:
+
+- Tanh help to solve non zero centered problem of sigmoid function. Tanh squashes a real-valued number to the range [-1, 1]. Tanh has large area under better slope compared to sigmoid, this helps models using Tanh activation to learn better. Derivative function give us almost same as sigmoid derivative function. It solve sigmoid’s drawback but it still can’t remove the vanishing gradient problem completely.
+
+[**Day53 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6878676950211280896-a94E)
+
+**💡 ReLU Function**: 
+
+- ReLU stands for rectified linear activation unit. It is simple yet really better than its predecessor activation functions such as sigmoid or tanh. ReLU function is its derivative both are monotonic. The function returns 0 if it receives any negative input, but for any positive value x, it returns that value back. Thus it gives an output that has a range from 0 to infinity. The model can, therefore, take less time to train or run. One more important property that we consider the advantage of using ReLU activation function is sparsity. Sparsity results in concise models that often have better predictive power and less overfitting/noise. In a sparse network, it’s more likely that neurons are actually processing meaningful aspects of the problem.
+
+**💡 Leaky ReLU Function**:
+
+- Leaky ReLU function is an improved version of the ReLU activation function. As for the ReLU activation function, the gradient is 0 for all the values of inputs that are less than zero, which would deactivate the neurons in that region and may cause dying ReLU problem.Leaky ReLU is defined to address this problem. Instead of defining the ReLU activation function as 0 for negative values of inputs(x), we define it as an extremely small linear component of x.
+- This function returns x if it receives any positive input, but for any negative value of x, it returns a really small value which is 0.01 times x. Thus it gives an output for negative values as well. By making this small modification, the gradient of the left side of the graph comes out to be a non zero value. Hence we would no longer encounter dead neurons in that region.
