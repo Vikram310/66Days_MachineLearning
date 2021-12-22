@@ -846,3 +846,23 @@ next layer, its output is computed and passed to the next layer, and so on until
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day55 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6879404504828264449-4wS2)
+
+**💡 Classification MLP**: 
+
+- MLPs can also be used for classification tasks. For a binary classification problem, you just need a single output neuron using the logistic activation function: the output will be a number between 0 and 1. MLPs can also easily handle multilabel binary classification tasks. For example, An email classification system that predicts whether each incoming email is ham or spam, and simultaneously predicts whether it is an urgent or non-urgent email.
+-In the above scenario, need two output neurons, both using the logistic activation function: the first would output the probability that the email is spam and the second would output the probability that it is urgent. In general, we can say that we dedicate one output neuron for each positive class. Note that the output probabilities do not necessarily add up to one. This lets the model output any combination of labels.
+- If each instance can belong only to a single class, out of 3 or more possible classes, then we need to have one output neuron per class, and we will use the softmax activation function for the whole output layer. The softmax function will ensure that all the estimated probabilities are between 0 and 1 and that they add
+up to one (which is required if the classes are exclusive). This is called multiclass classification. Regarding the loss function, since we are predicting probability distributions, the cross-entropy (also called the log loss) is generally a good choice.
+
+**💡 Typical Classification (Multiclass) MLP Architecture**:
+1. Input layers: One per input feature
+2. Hidden layers: Depends on the problem(Typically 1 to 5)
+3. Neurons per hidden layer: Depends on the problem (10 to 100)
+4. Output neurons: 1 per class
+5. Output activation: Softmax
+6. Loss function : Cross-Entropy
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
