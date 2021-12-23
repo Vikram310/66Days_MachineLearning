@@ -834,6 +834,7 @@ next layer, its output is computed and passed to the next layer, and so on until
 - MLPs can be used for regression tasks. If you want to predict a single value, then you just need a single output neuron: its output is the predicted value. For multivariate regression, you need one output neuron per output dimension. For example, to locate the center of an object on an image, you need to predict 2D coordinates, so you need two output neurons.
 - In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values. However, if you want to  guarantee that the output will always be positive, then you can use the ReLU activation function in the output layer.If we want to guarantee that the predictions will fall within a given range of values, then you can use the logistic function or the hyperbolic tangent, and scale the labels to the appropriate range: 0 to 1 for the logistic function, or –1 to 1 for the hyperbolic tangent.
 - The loss function to use during training is typically the mean squared error, but if you have a lot of outliers in the training set, you may prefer to use the mean absolute error instead.  Alternatively, you can use the Huber loss, which is a combination of both.
+
 **💡 Typical Regression MLP Architecture**: 
       
       1. Input neurons: One per input feature 
@@ -864,5 +865,24 @@ up to one (which is required if the classes are exclusive). This is called multi
 5. Output activation: Softmax
 6. Loss function : Cross-Entropy
 
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day56 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6879768505911259136-sRRv)
+
+**💡 Vanishing Gradients Problem**: 
+
+- It describes the situation where a deep multilayer feed-forward network or an RNN is unable to propagate useful gradient information from the output end of the model back to the layers near the input end of the model. The result is the general inability of models with many layers to learn on a given dataset, or for models with many layers to prematurely converge to a poor solution.
+- Certain activation functions, like the sigmoid function, squishes a large input space into a small input space between 0 and 1. Therefore, a large change in the input of the sigmoid function will cause a small change in the output. Hence, the derivative becomes small.For shallow network with only a few layers that use these activations, this isn’t a big problem. However, when more layers are used, it can cause the gradient to be too small for training to work effectively. 
+
+**💡 Methods proposed to overcome vanishing gradient problem**:
+      
+      1. Multi-level hierarchy
+      2. Long short – term memory
+      3. Faster hardware
+      4. Residual neural networks (ResNets)
+      5. ReLU
+- The simplest solution is to use other activation functions, such as ReLU, which doesn’t cause a small derivative. Residual networks are another solution, as they provide residual connections straight to earlier layers. 
+- 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
