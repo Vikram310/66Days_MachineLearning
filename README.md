@@ -886,3 +886,53 @@ up to one (which is required if the classes are exclusive). This is called multi
 - 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day57 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6880124258983522304-8EDv)
+
+**💡 Exploding Gradients Problem**: 
+
+- Exploding gradients are a problem when large error gradients accumulate and result in very large updates to neural network model weights during training. Gradients are used during training to update the network weights, but when the typically this process works best when these updates are small and controlled. A gradient calculates the direction and magnitude during the training of a neural network and it is used to teach the network weights in the right direction by the right amount. When there is an error gradient, explosion of components may grow exponentially.
+- When the magnitudes of the gradients accumulate, an unstable network is likely to occur, which can cause poor prediction results or even a model that reports nothing useful what so ever. 
+- There are some signs which are helpful in determining whether model is suffering from exploding gradients during training of network
+
+      1. The model does not learn much on training data therefore resulting in poor loss.
+      2. The model weights go to NaN during training.
+      3. During training, the model weights grow exponentially and become very large.
+      4. The error gradient values are always above 1.
+- There are many approaches to fix exploding gradients but some of the best approaches are:
+
+      1. Use LSTM network
+      2. Use Gradient clipping
+      3. Use Regularization(like L2 norm)
+      4. Redesign the neural network
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day58 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6880491869734871040-rzCL)
+
+**💡 Batch Normalization**: 
+
+- Although using He initialization along with ELU (or any variant of ReLU) can significantly reduce the vanishing/exploding gradients problems at the beginning of training, it doesn’t guarantee that they won’t come back during training. In a 2015 Sergey Ioffe and Christian Szegedy proposed a technique called Batch Normalization (BN) to address the vanishing/exploding gradients problems. The technique consists of adding an operation in the model just before or after the activation function of each hidden layer, simply zero-centering and normalizing each input, then scaling and shifting the result using two new parameter vectors per layer: one for scaling, the other for shifting.
+- In other words, this operation lets the model learn the optimal scale and mean of each of the layer’s inputs. In many cases, if you add a BN layer as the very first layer of your neural network, you do not need to standardize your training set : the BN layer will do it for you. In order to zero-center and normalize the inputs, the algorithm needs to estimate each input’s mean and standard deviation. It does so by evaluating the mean and standard deviation of each input over the current mini-batch (hence the name “Batch Normalization”).
+
+**💡 Advantages of Batch Normalization**:
+
+- By Normalizing the hidden layer activation the Batch normalization speeds up the training process
+- It solves the problem of internal covariate shift. Through this, we ensure that the input for every layer is distributed around the same mean and standard deviation.
+- Batch normalization smoothens the loss function that in turn by optimizing the model parameters improves the training speed of the model.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day59 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6880855940623679488-m8V2)
+
+**💡 Gradient Clipping**: 
+
+- Another popular technique to lessen the exploding gradients problem is to simply clip the gradients during backpropagation so that they never exceed some threshold. This is called Gradient Clipping. This technique is most often used in recurrent neural networks, as Batch Normalization is tricky to use in RNNs.In Keras, implementing Gradient Clipping is just a matter of setting the clipvalue or clipnorm argument when creating an optimizer.
+- This will clip every component of the gradient vector to a value between –1.0 and 1.0. This means that all the partial derivatives of the loss will be clipped between –1.0 and 1.0. The threshold is a hyperparameter you can tune.Note that it may change the orientation of the gradient vector. In practice however, this approach works well. If you want to ensure that Gradient Clipping does not change the direction of the gradient vector, you should clip by norm by setting clipnorm instead of clipvalue. This will clip the whole gradient if its ℓ2 norm is greater than the threshold you picked.
+- If you observe that the gradients explode during training (you can track the size of the gradients using TensorBoard), you may want to try both clipping by value and clipping by norm, with different threshold, and see which option performs best on the validation set.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
