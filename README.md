@@ -936,3 +936,59 @@ up to one (which is required if the classes are exclusive). This is called multi
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
 
+[**Day60 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6881209281090326528-Rdte)
+
+**💡 Transfer learning**: 
+
+- It is generally not a good idea to train a very large DNN from scratch: instead, you should always try to find an existing neural network that accomplishes a similar task to the one you are trying to tackle, then just reuse the lower layers of this network.This is called transfer learning. It will not only speed up training considerably, but will also require much less training data.
+- If the input pictures of your new task don’t have the same size as the ones used in the original task, you will usually have to add a preprocessing step to resize them to the size expected by the original model. More generally, transfer learning will work best when the inputs have similar low-level features.The output layer of the original model should usually be replaced since it is most likely not useful for the current task. Similarly, the upper hidden layers of the original model are less likely to be as useful as the lower layers, since the high-level features that are most useful for the new task may differ significantly from the ones that were most useful for the original task.
+- The more similar the tasks are, the more layers you want to reuse. For very similar tasks, you can try keeping all the hidden layers and just replace the output layer.Try freezing all the reused layers first, then train your model and see how it performs. Then try unfreezing one or two of the top hidden layers to let backpropagation tweak them and see if performance improves. It is also useful to reduce the learning rate when you unfreeze reused layers: this will avoid wrecking their fine-tuned weights.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day61 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6881594129164451840-lXBm)
+
+**💡 Momentum Optimization**: 
+
+- Imagine a bowling ball rolling down a gentle slope on a smooth surface: it will start out slowly, but it will quickly pick up momentum until it eventually reaches terminal velocity. This is the very simple idea behind Momentum optimization. An Adaptive Optimization Algorithm uses exponentially weighted averages of gradients over previous iterations to stabilize the convergence, resulting in quicker optimization.
+- Momentum optimization cares a great deal about what previous gradients were: at each iteration, it subtracts the local gradient from the momentum vector m (multiplied by the learning rate η), and it updates the weights by simply adding this momentum vector. Gradient Descent goes down the steep slope quite fast, but then it takes a very long time to go down the valley. In contrast, momentum optimization will roll down the valley faster and faster
+until it reaches the bottom (the optimum).
+- In deep neural networks that don’t use Batch Normalization, the upper layers will often end up having inputs with very different
+scales, so using Momentum optimization helps a lot. It can also help roll past local minima.The one drawback of Momentum optimization is that it adds yet another hyperparameter to tune. However, the momentum value of 0.9 usually works well in practice and almost always goes faster than regular Gradient Descent.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day62 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6881939481172279296-3-Vo)
+
+**💡 Nesterov Accelerated Gradient**: 
+
+- The idea of Nesterov Momentum optimization, or Nesterov Accelerated Gradient (NAG), is to measure the gradient of the cost function not at the local position but slightly ahead in the direction of the momentum. The only difference from vanilla Momentum optimization is that the gradient is measured at θ + βm rather than at θ.
+- This small tweak works because in general the momentum vector will be pointing in the right direction (i.e., toward the optimum), so it will be slightly more accurate to use the gradient measured a bit farther in that direction rather than using the gradient at the original position. After a while, these small improvements add up and NAG ends up being significantly faster than regular Momentum optimization. Moreover, note that when the momentum pushes the weights across a valley, ∇1(Regular Momentum Update) continues to push further across the valley, while ∇2 (Nesterov Update) pushes back toward the bottom of the valley. This helps reduce oscillations and thus converges faster.
+- NAG will almost always speed up training compared to regular Momentum optimization. To use it, simply set nesterov=True when creating the SGD optimizer
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day63 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6882305889710305280-j_Yz)
+
+**💡 Adagrad Optimizer**: 
+
+- Consider the elongated bowl problem, Gradient Descent starts by quickly going down the steepest slope, then slowly goes down the bottom of the valley. It would be nice if the algorithm could detect this early on and correct its direction to point a bit more toward the global optimum. The AdaGrad algorithm achieves this early compared to Gradient Descent by scaling down the gradient vector along the steepest dimensions.
+- This algorithm decays the learning rate, but it does so faster for steep dimensions than for dimensions with gentler slopes. This is called an adaptive learning rate.It helps point the resulting updates more directly toward the global optimum. One additional benefit is that it requires much less tuning of the learning rate hyperparameter η
+- AdaGrad often performs well for simple quadratic problems, but unfortunately it often stops too early when training neural networks. The learning rate gets scaled down so much that the algorithm ends up stopping entirely before reaching the global optimum. So even though Keras has an Adagrad optimizer, you should not use it to train deep neural networks
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day64 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6882664056126369792-Rssr)
+
+**💡 RMSProp**: 
+
+- RMSProp, which stands for Root Mean Square Propagation, is a gradient descent optimization algorithm. RMSProp was developed in order to overcome the short comings of the AdaGrad algorithm. That is, RMSProp does not decay the learning rate too quickly preventing convergence.
+- RMSProp makes use of exponential decay in order to manage the size of the vector(S). Unlike AdaGrad, RMSProp decays the contribution of older gradients at each step. This prevents the magnitude of (S) from becoming so large that it prevents learning.As a result of this exponential decay, the accumulated gradients in (S)  are focused on recent gradients as a opposed to all previous gradients.
+- The hyperparameter β  is known as the decay rate. This hyperparameter is used to control the focus of the adaptive learning rate on more recent gradients.In almost all cases RMSProp will outperform AdaGrad. As a result of this RMSProp was the preferred optimization algorithm until the Adam optimization algorithm was introduced.
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
