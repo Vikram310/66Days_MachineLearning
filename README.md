@@ -992,3 +992,35 @@ scales, so using Momentum optimization helps a lot. It can also help roll past l
 
 - Reference:
   - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day65 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6883025023305699328-EMI6)
+
+**💡 Adam Optimization**: 
+
+- Adam, which stands for adaptive moment estimation, combines the ideas of Momentum optimization and RMSProp: just like Momentum optimization it keeps track of an exponentially decaying average of past gradients, and just like RMSProp it keeps track of an exponentially decaying average of past squared gradients.Instead of adapting the parameter learning rates based on the average first moment (the mean) as in RMSProp, Adam also makes use of the average of the second moments of the gradients (the uncentered variance).
+- Specifically, the algorithm calculates an exponential moving average of the gradient and the squared gradient, and the parameters beta1 and beta2 control the decay rates of these moving averages. It takes two parameters: momentum decay hyperparameter β1 and scaling decay hyperparameter β2. The momentum decay hyperparameter β1 is typically initialized to 0.9, while the scaling decay hyperparameter β2 is often initialized to 0.999
+- Since Adam is an adaptive learning rate algorithm (like AdaGrad and RMSProp), it requires less tuning of the learning rate hyperparameter η. You can often use the default value η = 0.001, making Adam even easier to use than Gradient Descent.
+- Nadam Optimization is an important variant of Adam optimization, which is simply Adam optimization plus the Nesterov trick, so it will often converge slightly faster than Adam. In his report, Timothy Dozat compares many different optimizers on various tasks and finds that Nadam generally outperforms Adam, but is sometimes outperformed by RMSProp
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
+
+[**Day66 of 66DaysOfData!**](https://www.linkedin.com/posts/vikram--krishna_66daysofdata-linkedinhardmode-datawithvikram-activity-6883384573456195584-2L9K)
+
+**💡 Training Sparse models**: 
+
+- All the optimization algorithms just presented produce dense models, meaning that most parameters will be nonzero. If you need a blazingly fast model at runtime, or if you need it to take up less memory, you may prefer to end up with a sparse model instead. One trivial way to achieve this is to train the model as usual, then get rid of the tiny weights (set them to 0). However, this will typically not lead to a very sparse model, and it may degrade the model’s performance.
+- A better option is to apply strong ℓ1 regularization during training, as it pushes the optimizer to zero out as many weights as it can. However, in some cases, these techniques may remain insufficient. One last option is to apply Dual Averaging, often called Follow The Regularized Leader (FTRL), a technique proposed by Yurii Nesterov. 20 When used with ℓ1 regularization, this technique often leads to a very sparse model.
+
+**💡 Learning Rate Scheduling**: 
+
+- Finding a good learning rate can be tricky. If you set it way too high, training may actually diverge. If you set it too low, training will eventually converge to the optimum, but it will take a very long time. If you set it slightly too high, it will make progress very quickly at first, but it will end up dancing around the optimum, never really settling down.If you have a limited computing budget, you may have to interrupt training before it has converged properly, yielding a suboptimal solution
+- We can do better than a constant learning rate: if you start with a high learning rate and then reduce it once it stops making fast progress, you can reach a good solution faster than with the optimal constant learning rate.There are many different strategies to reduce the learning rate during training. These strategies are called learning schedules. Some of the popular are:
+
+      1. Power Scheduling
+      2. Exponential Scheduling
+      3. Piecewise Constant Scheduling
+      4. Performance Scheduling
+
+- Reference:
+  - Hands-On Machine Learning with Scikit-Learn, Keras and Tensor Flow
